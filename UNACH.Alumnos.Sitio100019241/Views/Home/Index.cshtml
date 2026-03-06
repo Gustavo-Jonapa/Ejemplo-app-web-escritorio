@@ -1,0 +1,282 @@
+﻿
+
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<div class="header-institucional">
+    <div class="logos-container">
+        <img src="~/img/logo_unach.png" class="logo-unach" alt="Logo UNACH" />
+        <img src="~/img/logo_facultad.png" class="logo-unach" alt="Logo Facultad" />
+    </div>
+    <h1>UNIVERSIDAD AUTÓNOMA DE CHIAPAS</h1>
+    <h4>FACULTAD DE CONTADURÍA Y ADMINISTRACIÓN CI</h4>
+</div>
+
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <h2 class="carousel-title">
+            <span class="glyphicon glyphicon-camera"></span>
+            Galería Institucional
+        </h2>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/img/1.jpg"
+                         alt="Campus UNACH">
+                </div>
+                <div class="item">
+                    <img src="~/img/2.jpg"
+                         alt="Instalaciones">
+                </div>
+                <div class="item">
+                    <img src="~/img/3.jpg"
+                         alt="Actividades Académicas">
+                </div>
+                <div class="item">
+                    <img src="~/img/4.jpg"
+                         alt="Actividades Académicas">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="info-section">
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="icon">
+                <span class="glyphicon glyphicon-education"></span>
+            </div>
+            <h3>Excelencia Académica</h3>
+            <p>Programas educativos de calidad con reconocimiento nacional e internacional.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">
+                <span class="glyphicon glyphicon-globe"></span>
+            </div>
+            <h3>Compromiso Social</h3>
+            <p>Formando profesionales comprometidos con el desarrollo de Chiapas y México.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">
+                <span class="glyphicon glyphicon-star"></span>
+            </div>
+            <h3>Infraestructura</h3>
+            <p>Instalaciones modernas y equipamiento de vanguardia para tu formación.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header-institucional {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 30px 20px;
+        margin: -20px -15px 30px -15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .header-institucional .logos-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .header-institucional .logo-unach {
+        width: 100px;
+        height: auto;
+        margin: 0 20px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .header-institucional .logo-unach:hover {
+        transform: scale(1.05);
+    }
+
+    .header-institucional h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        letter-spacing: 1px;
+    }
+
+    .header-institucional h4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
+        opacity: 0.95;
+    }
+
+    .carousel-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .carousel-wrapper {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .carousel-title {
+        text-align: center;
+        color: #1e3c72;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #2a5298;
+    }
+
+    #myCarousel {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .carousel-inner > .item > img {
+        margin: auto;
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;
+    }
+
+    .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+        border: 2px solid white;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    .carousel-indicators .active {
+        background-color: white;
+        width: 14px;
+        height: 14px;
+    }
+
+    .carousel-control {
+        background: none;
+    }
+
+    .carousel-control .glyphicon {
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-control:hover .glyphicon {
+        color: #ffd700;
+    }
+
+    .info-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .info-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .info-card {
+        flex: 1;
+        min-width: 250px;
+        max-width: 280px;
+        background: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .info-card .icon {
+        font-size: 50px;
+        color: #2a5298;
+        margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+        color: #1e3c72;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .info-card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .header-institucional h4 {
+        font-size: 16px;
+    }
+
+    .header-institucional .logo-unach {
+        width: 70px;
+        margin: 0 10px;
+    }
+
+    .info-card {
+        min-width: 100%;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#myCarousel').carousel({
+            interval: 4000,
+            pause: 'hover',
+            wrap: true
+        });
+        $('.carousel-wrapper').hide().fadeIn(800);
+        $('.info-card').each(function (index) {
+            $(this).delay(200 * index).fadeIn(600);
+        });
+    });
+</script>

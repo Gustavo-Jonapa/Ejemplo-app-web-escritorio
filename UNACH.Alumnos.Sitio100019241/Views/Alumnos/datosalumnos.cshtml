@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Alumnos";
+}
+
+<div class="container-fluid" style="padding: 30px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="background: #1a237e; border-radius: 10px; padding: 25px 30px; margin-bottom: 30px;">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2 style="color: #fff; margin: 0; font-weight: 700; letter-spacing: 1px;">
+                            <span class="glyphicon glyphicon-education" style="margin-right: 12px;"></span>
+                            Gestión de Alumnos
+                        </h2>
+                    </div>
+                    <div class="col-sm-4 text-right" style="padding-top: 8px;">
+                        <a href="@Url.Action("Create","Alumnos")"
+                           class="btn btn-lg"
+                           style="background-color: #fff; color: #1a237e; font-weight: 600;
+                                  border: none; border-radius: 6px; padding: 10px 22px;
+                                  box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                            <span class="glyphicon glyphicon-plus" style="margin-right: 8px;"></span>
+                            Nuevo Alumno
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="background: #fff; border-radius: 10px;
+                        box-shadow: 0 2px 20px rgba(0,0,0,0.1); overflow: hidden;">
+                <div style="background: #f8f9ff; padding: 16px 24px;
+                             border-bottom: 2px solid #e8eaf6;">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 style="margin: 0; color: #3949ab; font-weight: 600;">
+                                <span class="glyphicon glyphicon-th-list" style="margin-right: 8px;"></span>
+                                Lista de Alumnos
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0;">
+                    <table class="table" style="margin-bottom: 0;">
+                        <thead>
+                            <tr style="background-color: #e8eaf6;">
+                                <th style="color: #1a237e; font-weight: 700; padding: 14px 20px;
+                                           border-bottom: 2px solid #c5cae9; width: 8%;">
+                                    <span class="glyphicon glyphicon-tag" style="margin-right:6px;"></span> ID
+                                </th>
+                                <th style="color: #1a237e; font-weight: 700; padding: 14px 20px;
+                                           border-bottom: 2px solid #c5cae9;">
+                                    <span class="glyphicon glyphicon-user" style="margin-right:6px;"></span> Nombre
+                                </th>
+                                <th style="color: #1a237e; font-weight: 700; padding: 14px 20px;
+                                           border-bottom: 2px solid #c5cae9;">
+                                    <span class="glyphicon glyphicon-envelope" style="margin-right:6px;"></span> Correo
+                                </th>
+                                <th style="color: #1a237e; font-weight: 700; padding: 14px 20px;
+                                           border-bottom: 2px solid #c5cae9; width: 28%; text-align:center;">
+                                    <span class="glyphicon glyphicon-cog" style="margin-right:6px;"></span> Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr style="transition: background 0.2s;">
+                                    <td style="padding: 14px 20px; vertical-align: middle;">
+                                        <span style="background:#e8eaf6; color:#3949ab; font-weight:700;
+                                                     border-radius:4px; padding:3px 10px; font-size:13px;">
+                                            #@item.id
+                                        </span>
+                                    </td>
+                                    <td style="padding: 14px 20px; vertical-align: middle; font-weight: 500; color: #333;">
+                                        <span class="glyphicon glyphicon-user"
+                                              style="color:#7986cb; margin-right:8px;"></span>
+                                        @item.Nombre
+                                    </td>
+                                    <td style="padding: 14px 20px; vertical-align: middle; color: #555;">
+                                        @item.Correo
+                                    </td>
+                                    <td style="padding: 14px 20px; vertical-align: middle; text-align: center;">
+                                        <a href="@Url.Action("Details","Alumnos", new { id = item.id })"
+                                           class="btn btn-sm"
+                                           style="background:#e3f2fd; color:#1565c0; border:1px solid #90caf9;
+                                                  border-radius:5px; margin:2px; font-weight:500;">
+                                            <span class="glyphicon glyphicon-th-list"></span> Detalles
+                                        </a>
+                                        <a href="@Url.Action("Edit","Alumnos", new { id = item.id })"
+                                           class="btn btn-sm"
+                                           style="background:#fff8e1; color:#f57f17; border:1px solid #ffe082;
+                                                  border-radius:5px; margin:2px; font-weight:500;">
+                                            <span class="glyphicon glyphicon-pencil"></span> Editar
+                                        </a>
+                                        <a href="@Url.Action("Delete","Alumnos", new { id = item.id })"
+                                           class="btn btn-sm"
+                                           style="background:#ffebee; color:#c62828; border:1px solid #ef9a9a;
+                                                  border-radius:5px; margin:2px; font-weight:500;"
+                                           onclick="return confirm('¿Está seguro de eliminar este registro?');">
+                                            <span class="glyphicon glyphicon-trash"></span> Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #ffffff;
+    }
+
+</style>
