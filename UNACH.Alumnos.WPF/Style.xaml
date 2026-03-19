@@ -43,4 +43,119 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!-- Estilo para TextBox moderno -->
+    <Style x:Key="ModernTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="15,12"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#2D3436"/>
+        <Setter Property="BorderBrush" Value="#DFE6E9"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8"
+                                SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" 
+                                        Focusable="false"
+                                        HorizontalScrollBarVisibility="Hidden"
+                                        VerticalScrollBarVisibility="Hidden"
+                                        Margin="2"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#74B9FF"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0984E3"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Estilo para Labels -->
+    <Style x:Key="ModernLabel" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="#2D3436"/>
+        <Setter Property="Margin" Value="0,0,0,8"/>
+    </Style>
+
+    <!-- Estilo para el botón principal -->
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="Background" Value="#0984E3"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="30,14"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="8"
+                                SnapsToDevicePixels="True">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#74B9FF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#0652A3"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Estilo para el botón secundario -->
+    <Style x:Key="SecondaryButton" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#636E72"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="30,14"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#DFE6E9"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8"
+                                SnapsToDevicePixels="True">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#F8F9FA"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="#B2BEC3"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#DFE6E9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

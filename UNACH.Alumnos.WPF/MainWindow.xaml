@@ -31,6 +31,7 @@
                     <SolidColorBrush Color="{DynamicResource ColorMenu}"/>
                 </StackPanel.Background>
                 <Button Content="Alumnos" Height="60" Margin="3.5" x:Name="AlumnosButtom" Click="AlumnosButtom_Click"></Button>
+                <Button Content="Profesores" Height="60" Margin="3.5" x:Name="MaestrosButtom" Click="MaestrosButtom_Click"></Button>
                 <Button Content="Acerca de" Height="60" Margin="3.5" x:Name="AcercaButtom" Click="AcercaButtom_Click"></Button>
             </StackPanel>
             <Grid Grid.Column="1" x:Name="ContenedorGrid">

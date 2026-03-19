@@ -38,5 +38,12 @@ namespace UNACH.Alumnos.WPF
             ContenedorGrid.Children.Clear();
             ContenedorGrid.Children.Add(acerca);
 		}
-    }
+
+		private void MaestrosButtom_Click(object sender, RoutedEventArgs e)
+		{
+            Capa_presentacion.MaestrosUC maestro = new Capa_presentacion.MaestrosUC();
+            ContenedorGrid.Children.Clear();
+            ContenedorGrid.Children.Add(maestro);
+		}
+	}
 }

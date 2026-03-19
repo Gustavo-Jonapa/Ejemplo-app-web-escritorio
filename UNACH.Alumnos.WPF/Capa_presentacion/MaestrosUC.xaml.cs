@@ -16,28 +16,18 @@ using System.Windows.Shapes;
 namespace UNACH.Alumnos.WPF.Capa_presentacion
 {
 	/// <summary>
-	/// Lógica de interacción para AlumnosUC.xaml
+	/// Lógica de interacción para MaestrosUC.xaml
 	/// </summary>
-	public partial class AlumnosUC : UserControl
+	public partial class MaestrosUC : UserControl
 	{
-		public AlumnosUC()
+		public MaestrosUC()
 		{
 			InitializeComponent();
 		}
-
 		private void UserControl_Loaded(object sender, RoutedEventArgs e)
 		{
-			Capa_logica.AlumnosCore alu = new Capa_logica.AlumnosCore();
-			AlumnosDG.ItemsSource = alu.ObtenerAlumnos();
+			Capa_logica.MaestrosCore prof = new Capa_logica.MaestrosCore();
+			MaestrosDG.ItemsSource = prof.ObtenerMaestros();
 		}
-
-		private void AgregarAlumnoButtom_Click(object sender, RoutedEventArgs e)
-		{
-			AlumnosDG.Visibility = Visibility.Collapsed;
-			FormularioGrid.Visibility = Visibility.Visible;
-			FormularioGrid.Children.Clear();
-			AgregarAlumnoUC agregarAlumno = new AgregarAlumnoUC();
-			FormularioGrid.Children.Add(agregarAlumno);
-		}
-    }
+	}
 }

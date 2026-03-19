@@ -68,7 +68,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Capa_presentacion\AgregarAlumnoUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Capa_presentacion\AlumnosUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Capa_presentacion\MaestrosUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,12 +90,21 @@
     </Compile>
     <Compile Include="Capa_datos\Alumno.cs" />
     <Compile Include="Capa_datos\AlumnosModel.cs" />
+    <Compile Include="Capa_datos\Maestro.cs" />
+    <Compile Include="Capa_datos\MaestrosModel.cs" />
     <Compile Include="Capa_logica\AlumnosCore.cs" />
+    <Compile Include="Capa_logica\MaestrosCore.cs" />
     <Compile Include="Capa_presentacion\AcercaUC.xaml.cs">
       <DependentUpon>AcercaUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Capa_presentacion\AgregarAlumnoUC.xaml.cs">
+      <DependentUpon>AgregarAlumnoUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Capa_presentacion\AlumnosUC.xaml.cs">
       <DependentUpon>AlumnosUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Capa_presentacion\MaestrosUC.xaml.cs">
+      <DependentUpon>MaestrosUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
